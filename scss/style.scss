@@ -1,17 +1,155 @@
-$primary-color: #3498db;
+$primary-color: #e7196a;
+$secondary-color: #1e2248;
+
+$spacing-unit: 20px;
+
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+:root {
+    --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
+}
+  
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Kanit", sans-serif;    
+    color: $secondary-color;  
+}
 
 body {
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
+    font-size: 1.6rem;  
+    font-weight: 400;
+    font-style: normal;
 }
 
-h1 {
+
+.primary-color-text {
   color: $primary-color;
-  text-align: center;
 }
+
+.primary-color-bg {
+    background-color: $primary-color;
+    color: white;
+}
+.primary-color-bg:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
 
 p {
-  font-size: 18px;
-  color: darken($primary-color, 20%);
-  text-align: center;
+  color: $secondary-color;
+  margin-top: $spacing-unit;
+}
+
+header {
+    max-height: 20vh;
+    border: 1px solid red;
+    padding: $spacing-unit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .logo {
+        // border: 1px solid rgb(0, 34, 255);
+        width: 15%;
+        img {
+            width: 100%;
+        }
+    }
+    nav {
+        // @include border(red);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        .nav-button {
+            max-height: 80%;
+            padding: $spacing-unit;
+            text-transform: uppercase;
+            font-weight: 700;
+            // @include border(green);
+            margin-right: 2rem;
+            text-align: center; 
+            cursor: pointer;
+        }
+        .nav-button:hover {
+            color: $primary-color;
+        }
+        .primary-color-bg:hover {
+            background-color: $primary-color;
+            color: $secondary-color;
+        }
+    }
+}
+
+main {
+    min-height: 60vh;
+    // @include border(red);
+    // background-color: #e7196b1e;
+    #myCarousel {        
+        // @include border(blue);
+        min-height: 50vh;
+        .carousel-indicators{
+            button {
+                border: 3px solid $primary-color;
+            }
+        }
+        .carousel-inner {
+            // border: 5px solid green;
+            min-height: 100%;
+            .carousel-item {
+                height: 100%;
+                text-transform: uppercase;
+                .container {
+                    // border: 5px solid green;
+                    min-height: 45vh;
+                    width: 100%;
+
+                    .carousel-caption {
+                        width: 50%;
+                        // border: 5px solid green;
+                        
+                    }
+                    .img-container {
+                        // border: 1px solid orange;
+                        width: 50%;
+                        margin-left: 50%;
+                        
+                    }
+
+
+                    h1 {
+                        font-size: 3rem;
+                        font-weight: 700;
+                        color: $secondary-color;
+                        span {
+                            color: $primary-color;
+                            line-height: 6rem;
+                        }
+                    }
+                    a {
+                        background-color: $primary-color;
+                        border: white;
+                        color: white;
+                        padding: 1.5rem 2rem;
+                        font-weight: 600;
+                        font-size: 1.4rem;
+                    }
+                }
+                img {
+                    height: 300px;
+                }
+                
+            }
+            
+        }
+    }
 }

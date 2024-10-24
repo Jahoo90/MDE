@@ -1,0 +1,125 @@
+:root {
+  --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Kanit", sans-serif;
+  color: #1e2248;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.primary-color-text {
+  color: #e7196a;
+}
+
+.primary-color-bg {
+  background-color: #e7196a;
+  color: white;
+}
+
+.primary-color-bg:hover {
+  background-color: #e7196a;
+  color: #1e2248;
+}
+
+p {
+  color: #1e2248;
+  margin-top: 20px;
+}
+
+header {
+  max-height: 20vh;
+  border: 1px solid red;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .logo {
+  width: 15%;
+}
+header .logo img {
+  width: 100%;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav .nav-button {
+  max-height: 80%;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+header nav .nav-button:hover {
+  color: #e7196a;
+}
+header nav .primary-color-bg:hover {
+  background-color: #e7196a;
+  color: #1e2248;
+}
+
+main {
+  min-height: 60vh;
+}
+main #myCarousel {
+  min-height: 50vh;
+}
+main #myCarousel .carousel-indicators button {
+  border: 3px solid #e7196a;
+}
+main #myCarousel .carousel-inner {
+  min-height: 100%;
+}
+main #myCarousel .carousel-inner .carousel-item {
+  height: 100%;
+  text-transform: uppercase;
+}
+main #myCarousel .carousel-inner .carousel-item .container {
+  min-height: 45vh;
+  width: 100%;
+}
+main #myCarousel .carousel-inner .carousel-item .container .carousel-caption {
+  width: 50%;
+}
+main #myCarousel .carousel-inner .carousel-item .container .img-container {
+  width: 50%;
+  margin-left: 50%;
+}
+main #myCarousel .carousel-inner .carousel-item .container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1e2248;
+}
+main #myCarousel .carousel-inner .carousel-item .container h1 span {
+  color: #e7196a;
+  line-height: 6rem;
+}
+main #myCarousel .carousel-inner .carousel-item .container a {
+  background-color: #e7196a;
+  border: white;
+  color: white;
+  padding: 1.5rem 2rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+main #myCarousel .carousel-inner .carousel-item img {
+  height: 300px;
+}/*# sourceMappingURL=style.css.map */
