@@ -1,0 +1,17 @@
+$primary-color: #3498db;
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: $primary-color;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  color: darken($primary-color, 20%);
+  text-align: center;
+}
