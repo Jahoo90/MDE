@@ -122,4 +122,8 @@ main #myCarousel .carousel-inner .carousel-item .container a {
 }
 main #myCarousel .carousel-inner .carousel-item img {
   height: 300px;
+}
+main #myCarousel .carousel-control-prev span, main #myCarousel .carousel-control-next span {
+  background-color: #e7196a;
+  padding: 1.4rem 0;
 }/*# sourceMappingURL=style.css.map */
