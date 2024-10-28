@@ -59,7 +59,10 @@ header nav {
   align-items: center;
   justify-content: space-around;
 }
-header nav .nav-button {
+header nav a {
+  text-decoration: none;
+}
+header nav a .nav-button {
   max-height: 80%;
   padding: 20px;
   text-transform: uppercase;
@@ -67,11 +70,12 @@ header nav .nav-button {
   margin-right: 2rem;
   text-align: center;
   cursor: pointer;
+  color: #1e2248;
 }
-header nav .nav-button:hover {
+header nav a .nav-button:hover {
   color: #e7196a;
 }
-header nav .primary-color-bg:hover {
+header nav a .primary-color-bg:hover {
   background-color: #e7196a;
   color: #1e2248;
 }
@@ -126,4 +130,37 @@ main #myCarousel .carousel-inner .carousel-item img {
 main #myCarousel .carousel-control-prev span, main #myCarousel .carousel-control-next span {
   background-color: #e7196a;
   padding: 1.4rem 0;
+}
+
+#section-products {
+  border: 1px solid blue;
+  text-align: center;
+  margin-top: 4rem;
+  padding: 3rem 0;
+  min-height: 100vh;
+}
+#section-products h1 {
+  color: #1e2248;
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+#section-products .key-words {
+  background-color: #e7196a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+#section-products .key-words h2 {
+  color: #fff;
+  padding: 3rem;
+  font-weight: 700;
+  font-size: 3rem;
+}
+#section-products .key-words h2 span {
+  font-weight: 900;
+  font-size: 4rem;
 }/*# sourceMappingURL=style.css.map */
