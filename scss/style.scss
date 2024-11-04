@@ -85,7 +85,8 @@ header {
               padding: 1.5rem $spacing-unit;
               text-transform: uppercase;
               font-weight: 700;
-              @include border(green);
+              font-size: 2rem;
+              // @include border(green);
               margin-right: 2rem;
               text-align: center; 
               cursor: pointer;
