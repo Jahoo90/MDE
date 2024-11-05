@@ -360,6 +360,7 @@ main {
     background-size: cover;
     background-repeat: repeat-x;
     padding: 10%;
+    z-index: -2;
 
     &::before {
       content: "";
@@ -369,15 +370,16 @@ main {
       width: 100%;
       height: 100%;
       background-color: var(--bg-color);
-      z-index: 0;
-      opacity: 0.9;
+      z-index: -1;
+      opacity: 0.8;
     }
     
     .services-list {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-between;      
+      color: $secondary-color;
       .services-item {
         min-width: 25%;
         border: 15px solid $primary-color;
@@ -408,16 +410,54 @@ main {
         }
         
         button {
-          min-width: 70%;
+          min-width: 80%;
           padding: 1.2rem ;
           text-transform: uppercase;
           letter-spacing: 2px;
           background-color: $primary-color;
           color: (var(--bg-color));
           font-weight: 500;
-        }
-        
+          border: none;
+        }        
       }
+    }
+    .section-results {
+      min-height: 36.5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 5rem;
+      z-index: 2;
+      align-items: center;
+      justify-content: center;
+
+      .result-text {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .result-text-box {
+          height: 50%;
+          font-size: 4.5rem;
+          padding-left: 2rem;
+          h2 {
+            font-size: 7rem;
+            font-weight: 700;
+            color: $primary-color;
+          }
+        }
+      }
+
+      .result-img {
+        width: 40%;
+        min-height: inherit;
+        background-image: url(../img/Group_2-removebg-preview.png);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #ffffffbe;
+      }
+
     }
   }
 
