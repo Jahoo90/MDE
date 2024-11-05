@@ -273,7 +273,7 @@ main #section-about_us .about_us-img {
   position: relative;
   width: 35%;
   height: inherit;
-  background-image: url(/img/hands.jpeg);
+  background-image: url(../img/hands.jpeg);
   background-position: center;
   background-size: 220%;
   display: flex;
@@ -303,7 +303,7 @@ main #services {
   min-height: 100vh;
   width: 100%;
   border: 1px solid blue;
-  background-image: url(/img/bricks.jpeg);
+  background-image: url(../img/bricks.jpeg);
   background-size: cover;
   background-repeat: repeat-x;
   padding: 10%;
