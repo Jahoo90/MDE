@@ -1,6 +1,8 @@
 @charset "UTF-8";
 :root {
   --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
+  --bg-color: #ffffff;
+  --bg-opacity: 0.1;
 }
 
 * {
@@ -223,8 +225,6 @@ main footer {
 main #section-products {
   text-align: center;
   margin-top: 4rem;
-  padding: 3rem 0;
-  min-height: 100vh;
 }
 main #section-products h1 {
   color: #1e2248;
@@ -250,4 +250,116 @@ main #section-products .key-words h2 {
 main #section-products .key-words h2 span {
   font-weight: 900;
   font-size: 4rem;
+}
+main #section-about_us {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-height: 50vh;
+}
+main #section-about_us .about_us-text {
+  width: 65%;
+  align-self: center;
+  padding: 5%;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+main #section-about_us .about_us-text h4 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+main #section-about_us .about_us-img {
+  position: relative;
+  width: 35%;
+  height: inherit;
+  background-image: url(/img/hands.jpeg);
+  background-position: center;
+  background-size: 220%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main #section-about_us .about_us-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  z-index: 1;
+  opacity: 0.35;
+}
+main #section-about_us h2 {
+  color: #e7196a;
+  font-weight: 700;
+  font-size: 4.2rem;
+  z-index: 2;
+}
+main #services {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  border: 1px solid blue;
+  background-image: url(/img/bricks.jpeg);
+  background-size: cover;
+  background-repeat: repeat-x;
+  padding: 10%;
+}
+main #services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  z-index: 0;
+  opacity: 0.9;
+}
+main #services .services-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main #services .services-list .services-item {
+  min-width: 25%;
+  border: 15px solid #e7196a;
+  z-index: 2;
+  padding: 5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 3rem;
+  background-color: var(--bg-color);
+}
+main #services .services-list .services-item img {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-self: center;
+}
+main #services .services-list .services-item h2 {
+  font-size: 4rem;
+}
+main #services .services-list .services-item li {
+  list-style: square;
+  line-height: 4rem;
+}
+main #services .services-list .services-item li::marker {
+  color: #e7196a;
+}
+main #services .services-list .services-item button {
+  min-width: 70%;
+  padding: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #e7196a;
+  color: var(--bg-color);
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
