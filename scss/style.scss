@@ -10,8 +10,10 @@ $spacing-unit: 20px;
 
 :root {
     --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
-    --bg-color: #ffffff;
+    --bg-color: $secondary-color;
     --bg-opacity: 0.1;
+    --darktheme-text-color: #fff;
+    --darktheme-bg-color: #1e2248;
 }
   
 
@@ -24,13 +26,14 @@ $spacing-unit: 20px;
 html {
     font-size: 62.5%;
     font-family: "Kanit", sans-serif;    
-    color: $secondary-color;  
+    color: var(--darktheme-text-color);  
 }
 
 body {
     font-size: 1.6rem;  
     font-weight: 400;
     font-style: normal;
+    background-color: $secondary-color;
 }
 
 
@@ -39,7 +42,7 @@ body {
 }
 
 p {
-  color: $secondary-color;
+  color: #fff;
   margin-top: $spacing-unit;
 }
 
@@ -52,9 +55,10 @@ header {
     justify-content: space-between;
     .logo {
         // border: 1px solid rgb(0, 34, 255);
-        width: 12%;
+        width: 15%;
         img {
             width: 100%;
+            // border: 1px solid red;
         }
     }
     nav {
@@ -94,7 +98,7 @@ header {
               cursor: pointer;
               display: inline-block;
               position: relative;
-              color: $secondary-color;
+              color: var(--darktheme-text-color);
                 span {
                   color: $primary-color;
                 }            
@@ -221,7 +225,7 @@ main {
       margin-left: 8%;
       h1 {
         font-size: 5rem;    
-        color: $secondary-color;
+        color: var(--darktheme-text-color);
         font-weight: 700;
         span {
           color: $primary-color;
@@ -286,8 +290,8 @@ main {
     .custom-indicator {
       width: 20px;
       height: 20px;
-      background-color: #ffffff00;
-      border: 5px solid $secondary-color;
+      background-color: #ffffff;
+      // border: 5px solid $secondary-color;
       cursor: pointer;
     }
     
@@ -297,10 +301,7 @@ main {
     }
     
     
-    footer {
-      height: 20vh;
-      @include border(black)
-    }
+
 
     #section-products {
     // @include border(blue);
@@ -347,11 +348,12 @@ main {
         align-self: center;
         padding: 5%;
         font-size: 2.6rem;
-        font-weight: 600;
+        font-weight: 400;
         h4 {          
         font-size: 2.6rem;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
+        color: #fff;
         }
       }
       .about_us-img {
@@ -366,6 +368,7 @@ main {
         align-items: center;
         justify-content: center;
         text-align: center;
+    
       }
 
       .about_us-img::before {
@@ -375,9 +378,9 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--bg-color);
+        background-color: $secondary-color;
         z-index: 1;
-        opacity: 0.35;
+        opacity: 0.65;
       }
         
         h2 {
@@ -393,11 +396,12 @@ main {
     min-height: 100vh;
     width: 100%;
     border: 1px solid blue;
-    background-image: url(../img/bricks.jpeg);
+    background-image: url(../img/bulding-bg.jpeg);
     background-size: cover;
-    background-repeat: repeat-x;
-    padding: 10%;
-    z-index: -2;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 7%;
+    z-index: 0;
 
     &::before {
       content: "";
@@ -406,9 +410,9 @@ main {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: var(--bg-color);
+      background-color: $secondary-color;
       z-index: -1;
-      opacity: 0.8;
+      opacity: 0.7;
     }
     
     .services-list {
@@ -417,9 +421,10 @@ main {
       align-items: center;
       justify-content: space-between;      
       color: $secondary-color;
+
       .services-item {
-        min-width: 25%;
-        border: 15px solid $primary-color;
+        min-width: 29%;
+        border: 8px solid $primary-color;
         z-index: 2;
         padding: 5rem;
         text-align: center;
@@ -428,7 +433,8 @@ main {
         flex-direction: column;
         gap: 2rem;
         font-size: 3rem;
-        background-color: var(--bg-color);
+        background-color: var(--darktheme-bg-color);
+        color: var(--darktheme-text-color);
         img {
           width: 100px;
           height: 100px;
@@ -459,11 +465,12 @@ main {
       }
     }
     .section-results {
+      padding: 0 12rem;
       min-height: 36.5rem;
       width: 100%;
       display: flex;
       flex-direction: row;
-      margin-top: 5rem;
+      margin-bottom: 10rem;
       z-index: 2;
       align-items: center;
       justify-content: center;
@@ -492,12 +499,18 @@ main {
         background-size: 80%;
         background-position: center;
         background-repeat: no-repeat;
-        background-color: #ffffffbe;
+        background-color: $secondary-color;
       }
 
     }
   }
 
+}
+
+
+footer {
+  height: 20vh;
+  @include border(black)
 }
 
 

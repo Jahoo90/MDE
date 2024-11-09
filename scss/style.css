@@ -1,8 +1,10 @@
 @charset "UTF-8";
 :root {
   --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
-  --bg-color: #ffffff;
+  --bg-color: $secondary-color;
   --bg-opacity: 0.1;
+  --darktheme-text-color: #fff;
+  --darktheme-bg-color: #1e2248;
 }
 
 * {
@@ -14,13 +16,14 @@
 html {
   font-size: 62.5%;
   font-family: "Kanit", sans-serif;
-  color: #1e2248;
+  color: var(--darktheme-text-color);
 }
 
 body {
   font-size: 1.6rem;
   font-weight: 400;
   font-style: normal;
+  background-color: #1e2248;
 }
 
 .primary-color-text {
@@ -28,7 +31,7 @@ body {
 }
 
 p {
-  color: #1e2248;
+  color: #fff;
   margin-top: 20px;
 }
 
@@ -40,7 +43,7 @@ header {
   justify-content: space-between;
 }
 header .logo {
-  width: 12%;
+  width: 15%;
 }
 header .logo img {
   width: 100%;
@@ -83,7 +86,7 @@ header nav a .nav-button {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  color: #1e2248;
+  color: var(--darktheme-text-color);
 }
 header nav a .nav-button span {
   color: #e7196a;
@@ -189,7 +192,7 @@ main .carousel-item-text {
 }
 main .carousel-item-text h1 {
   font-size: 5rem;
-  color: #1e2248;
+  color: var(--darktheme-text-color);
   font-weight: 700;
 }
 main .carousel-item-text h1 span {
@@ -246,17 +249,12 @@ main .custom-carousel-indicators {
 main .custom-indicator {
   width: 20px;
   height: 20px;
-  background-color: rgba(255, 255, 255, 0);
-  border: 5px solid #1e2248;
+  background-color: #ffffff;
   cursor: pointer;
 }
 main .custom-indicator.active {
   background-color: #e7196a;
   border: none;
-}
-main footer {
-  height: 20vh;
-  border: 1px solid black;
 }
 main #section-products {
   text-align: center;
@@ -298,12 +296,13 @@ main #section-about_us .about_us-text {
   align-self: center;
   padding: 5%;
   font-size: 2.6rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 main #section-about_us .about_us-text h4 {
   font-size: 2.6rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
+  color: #fff;
 }
 main #section-about_us .about_us-img {
   position: relative;
@@ -324,9 +323,9 @@ main #section-about_us .about_us-img::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--bg-color);
+  background-color: #1e2248;
   z-index: 1;
-  opacity: 0.35;
+  opacity: 0.65;
 }
 main #section-about_us h2 {
   color: #e7196a;
@@ -339,11 +338,12 @@ main #services {
   min-height: 100vh;
   width: 100%;
   border: 1px solid blue;
-  background-image: url(../img/bricks.jpeg);
+  background-image: url(../img/bulding-bg.jpeg);
   background-size: cover;
-  background-repeat: repeat-x;
-  padding: 10%;
-  z-index: -2;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 7%;
+  z-index: 0;
 }
 main #services::before {
   content: "";
@@ -352,9 +352,9 @@ main #services::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--bg-color);
+  background-color: #1e2248;
   z-index: -1;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 main #services .services-list {
   display: flex;
@@ -364,8 +364,8 @@ main #services .services-list {
   color: #1e2248;
 }
 main #services .services-list .services-item {
-  min-width: 25%;
-  border: 15px solid #e7196a;
+  min-width: 29%;
+  border: 8px solid #e7196a;
   z-index: 2;
   padding: 5rem;
   text-align: center;
@@ -374,7 +374,8 @@ main #services .services-list .services-item {
   flex-direction: column;
   gap: 2rem;
   font-size: 3rem;
-  background-color: var(--bg-color);
+  background-color: var(--darktheme-bg-color);
+  color: var(--darktheme-text-color);
 }
 main #services .services-list .services-item img {
   width: 100px;
@@ -403,11 +404,12 @@ main #services .services-list .services-item button {
   border: none;
 }
 main #services .section-results {
+  padding: 0 12rem;
   min-height: 36.5rem;
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: 5rem;
+  margin-bottom: 10rem;
   z-index: 2;
   align-items: center;
   justify-content: center;
@@ -435,5 +437,10 @@ main #services .section-results .result-img {
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.7450980392);
+  background-color: #1e2248;
+}
+
+footer {
+  height: 20vh;
+  border: 1px solid black;
 }/*# sourceMappingURL=style.css.map */
