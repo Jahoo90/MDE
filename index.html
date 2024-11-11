@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ****************************** google fonts ****************************** -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="./scss/style.css">
+
     <title>MDE - Twoja Księgowość</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./img/icon-dark_theme.png">
     <link rel="shortcut icon" href="favicon.ico">
@@ -19,7 +22,7 @@
 
         <header>
             <div class="logo">
-              <a href="#">
+              <a href="javascript:location.reload();">
                 <img src="./img/icon-dark_theme.png" alt="MDE logo">
               </a>
             </div>
@@ -35,11 +38,11 @@
                     <a href="#" onclick="changeLanguage('DE')">DE</a>
                   </div>
                 </div>
-                
-                <button aria-label="Theme switch">
+                <!-- ################################## color theme switch ####################################  -->
+                <!-- <button aria-label="Theme switch">
                   <span></span>
                   <div class="icon"></div>
-                </button>
+                </button> -->
                 <!-- <a href="#"><div class="nav-button primary-color-bg"> PL <i class="fa-solid fa-caret-down"></i> </div></a> -->
             </nav>
         </header>
@@ -53,7 +56,7 @@
               <div class="custom-carousel-item">
                 <div class="carousel-item-text">
                   <h1> <span> Przykładowy </span> <br> slajd <br> numer 3</h1>
-                  <p><a class="btn btn-lg btn-primary" href="#section-products">Bezpłatna konsultacja</a></p>
+                  <p><a class="btn btn-lg btn-primary" href="#">Bezpłatna konsultacja</a></p>
                 </div>
                 <div class="carousel-item-img">
                   <img src="./img/hero.jpg" alt="">
@@ -75,11 +78,11 @@
               </div>
               <div class="custom-carousel-item">
                 <div class="carousel-item-text">
-                  <h1> <span> Przykładowy </span> <br> slajd <br> numer 2</h1>
+                  <h1> <span> Rozwojowa </span> <br> Księgowość <br> dla Twojego biznesu</h1>
                   <p><a class="btn btn-lg btn-primary" href="#section-products">Bezpłatna konsultacja</a></p>
                 </div>
                 <div class="carousel-item-img">
-                  <img src="./img/hero.jpg" alt="">
+                  <img src="./img/hero2.jpg" alt="">
                 </div>
               </div>
               <div class="custom-carousel-item">
@@ -116,46 +119,72 @@
             </div>
           </div>
 
-          <div id="section-products">
+          <!-- <div id="section-products">
             <h1>Księgowy fundament dla Twojej firmy</h1>
             <div class="key-words">
               <h2><span>&check;</span>Profesjonalizm</h2>
               <h2><span>&check;</span>Rzetelność</h2>
               <h2><span>&check;</span>Wiarygodność </h2>
             </div>
-            <!-- <img src="./img/Zrzut ekranu 2024-10-28 210938.jpg" alt=""> -->
-          </div>
+          </div> -->
 
+                    <!-- ########################  Services section #############################  -->
+                    <div id="services">
+
+                      <div class="services-container">
+                        <div class="services-cards">
+                          <div class="services-card secondary-color-bg">
+                            <img class="services-item-icon" src="./img/icons/ksiegowosc.png" alt="icon">
+                            <h4>Księgowość</h4>
+                          </div>
+                          <div class="services-card primary-color-bg">
+                            <img class="services-item-icon" src="./img/icons/administracja.png" alt="icon">
+                            <h4>Administracja</h4>
+                          </div>
+                          <div class="services-card secondary-color-bg">
+                            <img class="services-item-icon" src="./img/icons/podatki.png" alt="icon">
+                            <h4>Podatki</h4>
+                          </div>
+                          <div class="services-card primary-color-bg">
+                            <img class="services-item-icon" src="./img/icons/uslugi-biurowe.png" alt="icon">
+                            <h4>Usługi biurowe</h4>
+                          </div>
+                          <div class="services-card secondary-color-bg">
+                            <img class="services-item-icon" src="./img/icons/doradztwo.png" alt="icon">
+                            <h4>Doradztwo księgowe</h4>
+                          </div>
+                          <div class="services-card primary-color-bg">
+                            <img class="services-item-icon" src="./img/icons/analiza.png" alt="icon">
+                            <h4>Analiza finansowa</h4>
+                          </div>
+                        </div>
+                        <div class="service-box">
+                          <p>Nasza <span class="primary-color-span">oferta</span> to kompleksowa obsługa <span class="primary-color-span">podatkowa</span> i <span class="primary-color-span">administracyjna</span></p>
+                          <a class="btn-primary" href="#">Umów konsultację</a>
+                        </div>
+                      </div>
+          
+                    </div>
+          
+          <!-- ########################  About Us section #############################  -->
           <div id="section-about_us">
             <div class="about_us-text">
-              <h4>About us</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ex vel iste quae! Repellendus corporis soluta excepturi tenetur dolorem voluptate quidem, error, ea officia aperiam totam temporibus aliquam delectus perspiciatis.
-              Hic vero, eum mollitia temporibus consequuntur obcaecati quas esse officiis aspernatur asperiores, reprehenderit ipsa perferendis veritatis nemo iure quam nobis? Ipsam, voluptate sunt tenetur temporibus reiciendis ratione est sapiente eligendi.</p>
+              <h4 class="kanit-semibold">Kim jesteśmy ?</h4>
+              <p>Od 2018 roku prowadzimy biuro rachunkowe MDE, oferując usługi z zakresu księgowości, podatków i zarządzania. Nasz zespół certyfikowanych ekspertów, dzięki doświadczeniu i znajomości niemieckiego prawa podatkowego, skutecznie rozwiązuje problemy finansowe i administracyjne ale nie tylko. Pomagamy osobom przybyłym do Niemiec w formalnościach związanych z adaptacją. Nieustannie podnosimy kwalifikacje, by zapewniać aktualną wiedzę z zakresu rachunkowości, podatków, kadr i płac. Naszym celem jest profesjonalne wsparcie w kontaktach z urzędami i instytucjami.</p>
             </div>
             <div class="about_us-img">
-              <h2>+10 Years <br>of experience</h2>
+              <h2>+6 lat <br>doświadczenia</h2>
             </div>
           </div>
 
-          <div id="services">
+          <!-- ########################  services section #############################  -->
+          <div id="services-extra">
 
-            <div class="section-results">
-              <div class="result-text">
-                <div class="result-text-box customers-achivment">
-                  <h2>+ 100</h2>
-                  <p>zadowolonych klientów</p>
-                </div>
-                <div class="result-text-box projects-achivment">
-                  <h2>+ 2000</h2>
-                  <p>ukończonych projektów</p>
-                </div>
-              </div>
-              <div class="result-img"></div>
-            </div>
-
+            <h2 class="kanit-semibold">Sprawdź jak <span class="primary-color-span">działamy</span></h2>
+            <p>dowiedz się więcej o naszych usługach</p>
             <div class="services-list">
               <div class="services-item">
-                <img class="services-item-icon" src="./img/suitcase.png" alt="suitcase icon">
+                <img class="services-item-icon" src="./img/icons/suitcase.png" alt="suitcase icon">
                 <h2>Podatki</h2>
                 <ol>
                   <li>punkt 1</li>
@@ -165,7 +194,7 @@
                 <button>więcej</button>
               </div>
               <div class="services-item">
-                <img class="services-item-icon" src="./img/wallet.png" alt="wallet icon">
+                <img class="services-item-icon" src="./img/icons/wallet.png" alt="wallet icon">
                 <h2>Inwestycje</h2>
                 <ul>
                   <li>punkt 1</li>
@@ -175,7 +204,7 @@
                 <button>więcej</button>
               </div>
               <div class="services-item">
-                <img class="services-item-icon" src="./img/checklist.png" alt="checklist icon">
+                <img class="services-item-icon" src="./img/icons/checklist.png" alt="checklist icon">
                 <h2>Rozliczenia</h2>
                 <ol>
                   <li>punkt 1</li>

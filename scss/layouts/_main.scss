@@ -1,0 +1,236 @@
+
+
+
+main {
+    min-height: 60vh;
+    // @include border(red);
+    // background-color: #e7196b1e;
+
+    #section-products {
+    // @include border(blue);
+    text-align: center;
+    margin-top: 4rem;
+    // padding: 3rem 0;
+    // min-height: 100vh;
+    h1 {
+        color: $secondary-color;
+        font-weight: 700;
+        font-size: 4rem;
+        letter-spacing: 0.2rem;
+        padding: 2rem;
+        text-transform: uppercase;
+    }
+
+        .key-words {
+            background-color: $primary-color;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            text-transform: uppercase;
+            
+            h2 {
+                color: #fff;
+                padding: 3rem;
+                font-weight: 700;
+                font-size: 3rem;
+                span {
+                    font-weight: 900;
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+
+    #section-about_us {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-height: 50vh;
+      .about_us-text {
+        width: 65%;
+        align-self: center;
+        padding: 5%;
+        font-size: 1.6rem;
+        font-weight: 500;
+        h4 {          
+        font-size: 3.4rem;
+        color: $primary-color;
+        }
+      }
+      .about_us-img {
+        position: relative;
+        // border: 1px solid red;
+        width: 35%;
+        height: inherit;
+        background-image: url(../img/hands.jpeg);
+        background-position: center;
+        background-size: 220%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    
+      }
+
+      .about_us-img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $secondary-color;
+        z-index: 1;
+        opacity: 0.65;
+      }
+        
+        h2 {
+          color: $primary-color;
+          font-weight: 700;
+          font-size: 4.2rem;
+          z-index: 2;
+        }
+    }
+  
+  #services, #services-extra {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../img/bulding-bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 7%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $secondary-color;
+      z-index: -1;
+      opacity: 0.7;
+    }
+
+    .services-container {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .services-cards {
+            width: 55%;
+            height: inherit;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .services-card {
+                width: 30%;
+                height: 18rem;
+                padding: 5%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;                
+            }
+        }
+
+        .service-box {
+            width: 40%;
+            height: 100%;
+            padding: 5% 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            border: 7px solid $primary-color;
+            font-size: 2.7rem;
+            font-weight: 400;
+            line-height: 3.3rem;
+            text-align: center;
+            background-color: $secondary-color;
+        }
+    }    
+  }
+
+  #services-extra {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h2 {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 4rem;
+    }
+    p {
+      font-size: 4rem;
+      margin-top: 0rem;
+      margin-bottom: 4rem;
+    }
+  }
+  
+  .services-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;      
+    color: $secondary-color;
+
+    .services-item {
+      min-width: 29%;
+      border: 8px solid $primary-color;
+      z-index: 2;
+      padding: 5rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 3rem;
+      background-color: var(--darktheme-bg-color);
+      color: var(--darktheme-text-color);
+      img {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        align-self: center;
+      }
+      h2 {
+        font-size: 4rem;
+      }
+      li {
+        list-style: square;
+        line-height: 4rem;
+        &::marker {
+          color: $primary-color;
+        }
+      }
+      
+      button {
+        min-width: 80%;
+        padding: 1.2rem ;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: $primary-color;
+        color: (var(--bg-color));
+        font-weight: 500;
+        border: none;
+      }        
+    }
+  }
+
+}

@@ -1,0 +1,142 @@
+
+header {
+    max-height: 20vh;
+    // border: 1px solid red;
+    padding: $spacing-unit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .logo {
+        // border: 1px solid rgb(0, 34, 255);
+        width: 15%;
+        img {
+            width: 100%;
+            // border: 1px solid red;
+        }
+    }
+    nav {
+        // @include border(red);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 3rem;
+        
+        .primary-color-bg {
+          background-color: $primary-color;
+          color: white;
+          padding: 15px 20px;
+          font-weight: 700;
+          min-width: 75px;
+        }
+
+        .primary-color-bg:hover {
+            background-color: $primary-color;
+            color: $secondary-color;
+            cursor: pointer;
+        }
+        a {
+          text-decoration: none;
+            
+            .nav-button {
+
+              max-height: 80%;
+              padding: 1.5rem $spacing-unit;
+              text-transform: uppercase;
+              font-weight: 700;
+              font-size: 2rem;
+              // @include border(green);
+              margin-right: 2rem;
+              text-align: center; 
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              color: var(--darktheme-text-color);
+                span {
+                  color: $primary-color;
+                }            
+            }
+            .nav-button:hover {
+                color: $primary-color;
+            }
+
+        }
+
+              /* Dropdown */
+      .language-dropdown {
+        position: relative;
+      }
+
+      /* Zawartość dropdown (ukryta na start) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $primary-color;
+        min-width: 75px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 4px;
+      }
+
+      /* Styl elementu w dropdownie */
+      .dropdown-content a {
+        color: rgb(255, 255, 255);
+        padding: 15px 20px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        background-color: $primary-color;
+        font-weight: 700;
+      }
+
+      /* Styl po najechaniu */
+      .dropdown-content a:hover {
+        background-color: $primary-color-dark;
+        color: $secondary-color;
+      }
+
+      /* Pokazuje dropdown na hover */
+      .language-dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      button {
+        background-color: #000;
+        border: solid 4px #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        height: 6.5rem;
+        outline-width: 5px;
+        position: relative;
+        width: 12rem;
+        margin: 0  3rem  ;
+        .icon {
+          background-color: grey;
+          border-radius: 100%;
+          content: "";
+          display: block;
+          height: 4.3rem;
+          margin: 0.7rem 1rem;
+          position: relative;
+          transition: background-color 0.3s, transform 0.3s;
+          width: 4.3rem;
+        }
+        .icon:hover {            
+          background-color: rgb(176, 176, 176);
+        }
+        span {
+          bottom: 100%;
+          color: var(--color-main);
+          font-size: 20px;
+          left: 50%;
+          padding: 12px 0;
+          position: absolute;
+          transform: translateX(-50%);
+          width: 100%;
+        }
+      }
+        
+    }
+}

@@ -1,38 +1,175 @@
 @charset "UTF-8";
-:root {
-  --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
-  --bg-color: $secondary-color;
-  --bg-opacity: 0.1;
-  --darktheme-text-color: #fff;
-  --darktheme-bg-color: #1e2248;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: "Kanit", sans-serif;
-  color: var(--darktheme-text-color);
-}
-
-body {
-  font-size: 1.6rem;
+.kanit-regular {
+  font-family: "Kanit", serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #1e2248;
 }
 
-.primary-color-text {
+.kanit-medium {
+  font-family: "Kanit", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kanit-semibold {
+  font-family: "Kanit", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kanit-bold {
+  font-family: "Kanit", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kanit-extrabold {
+  font-family: "Kanit", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.kanit-medium-italic {
+  font-family: "Kanit", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.primary-color-text, .primary-color-span {
+  color: #e7196a;
+}
+
+.primary-color-bg {
+  background-color: #e7196a;
+  color: #fff;
+}
+
+.secondary-color-bg {
+  background-color: #1e2248;
   color: #e7196a;
 }
 
 p {
   color: #fff;
   margin-top: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  background-color: #e7196a;
+  border: white;
+  color: white;
+  padding: 1.5rem 2rem;
+  font-weight: 600;
+  font-size: 2.1rem;
+  z-index: 100;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn-primary:hover {
+  background-color: #ff0c6d;
+  color: white;
+  z-index: 100;
+}
+
+.custom-carousel {
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-carousel-slides {
+  width: 100%;
+  display: flex;
+  transition: transform 0.9s ease-in-out;
+  display: flex;
+}
+
+.custom-carousel-item {
+  min-width: 100%;
+  min-height: 60vh;
+  padding: 0 0 50px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-item-text {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  margin-left: 8%;
+}
+.carousel-item-text h1 {
+  font-size: 5rem;
+  color: var(--darktheme-text-color);
+  font-weight: 700;
+}
+.carousel-item-text h1 span {
+  color: #e7196a;
+}
+
+.carousel-item-img {
+  width: 60%;
+  height: 60vh;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+}
+.carousel-item-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.custom-carousel-prev, .custom-carousel-next {
+  position: absolute;
+  top: 30%;
+  height: 50%;
+  width: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgba(255, 255, 255, 0);
+  font-size: 2rem;
+  padding: 5rem;
+  cursor: pointer;
+}
+
+.custom-carousel-prev {
+  left: 1px;
+}
+
+.custom-carousel-next {
+  right: 1px;
+}
+
+.custom-carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  right: 10%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.custom-indicator {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.custom-indicator.active {
+  background-color: #e7196a;
+  border: none;
 }
 
 header {
@@ -163,99 +300,6 @@ header nav button span {
 main {
   min-height: 60vh;
 }
-main .custom-carousel {
-  margin-top: 5rem;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-main .custom-carousel-slides {
-  width: 100%;
-  display: flex;
-  transition: transform 0.9s ease-in-out;
-  display: flex;
-}
-main .custom-carousel-item {
-  min-width: 100%;
-  min-height: 60vh;
-  padding: 0 0 50px 40px;
-  color: #fff;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-}
-main .carousel-item-text {
-  width: 50%;
-  height: auto;
-  align-self: center;
-  margin-left: 8%;
-}
-main .carousel-item-text h1 {
-  font-size: 5rem;
-  color: var(--darktheme-text-color);
-  font-weight: 700;
-}
-main .carousel-item-text h1 span {
-  color: #e7196a;
-}
-main .carousel-item-text a {
-  background-color: #e7196a;
-  border: white;
-  color: white;
-  padding: 1.5rem 2rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  z-index: 100;
-}
-main .carousel-item-text a:hover {
-  background-color: #ff0c6d;
-  color: white;
-  z-index: 100;
-}
-main .carousel-item-img {
-  width: 50%;
-  height: auto;
-}
-main .carousel-item-img img {
-  width: 100%;
-}
-main .custom-carousel-prev, main .custom-carousel-next {
-  position: absolute;
-  top: 30%;
-  height: 50%;
-  width: 40%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  color: rgba(255, 255, 255, 0);
-  font-size: 2rem;
-  padding: 5rem;
-  cursor: pointer;
-}
-main .custom-carousel-prev {
-  left: 1px;
-}
-main .custom-carousel-next {
-  right: 1px;
-}
-main .custom-carousel-indicators {
-  position: absolute;
-  bottom: 15px;
-  right: 10%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-main .custom-indicator {
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-main .custom-indicator.active {
-  background-color: #e7196a;
-  border: none;
-}
 main #section-products {
   text-align: center;
   margin-top: 4rem;
@@ -295,14 +339,12 @@ main #section-about_us .about_us-text {
   width: 65%;
   align-self: center;
   padding: 5%;
-  font-size: 2.6rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 main #section-about_us .about_us-text h4 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
+  font-size: 3.4rem;
+  color: #e7196a;
 }
 main #section-about_us .about_us-img {
   position: relative;
@@ -333,19 +375,20 @@ main #section-about_us h2 {
   font-size: 4.2rem;
   z-index: 2;
 }
-main #services {
+main #services, main #services-extra {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  border: 1px solid blue;
   background-image: url(../img/bulding-bg.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
   padding: 7%;
   z-index: 0;
+  display: flex;
+  align-items: center;
 }
-main #services::before {
+main #services::before, main #services-extra::before {
   content: "";
   position: absolute;
   top: 0;
@@ -356,14 +399,74 @@ main #services::before {
   z-index: -1;
   opacity: 0.7;
 }
-main #services .services-list {
+main #services .services-container, main #services-extra .services-container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main #services .services-container .services-cards, main #services-extra .services-container .services-cards {
+  width: 55%;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main #services .services-container .services-cards .services-card, main #services-extra .services-container .services-cards .services-card {
+  width: 30%;
+  height: 18rem;
+  padding: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main #services .services-container .service-box, main #services-extra .services-container .service-box {
+  width: 40%;
+  height: 100%;
+  padding: 5% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border: 7px solid #e7196a;
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 3.3rem;
+  text-align: center;
+  background-color: #1e2248;
+}
+main #services-extra {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main #services-extra h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 4rem;
+}
+main #services-extra p {
+  font-size: 4rem;
+  margin-top: 0rem;
+  margin-bottom: 4rem;
+}
+main .services-list {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   color: #1e2248;
 }
-main #services .services-list .services-item {
+main .services-list .services-item {
   min-width: 29%;
   border: 8px solid #e7196a;
   z-index: 2;
@@ -377,23 +480,23 @@ main #services .services-list .services-item {
   background-color: var(--darktheme-bg-color);
   color: var(--darktheme-text-color);
 }
-main #services .services-list .services-item img {
+main .services-list .services-item img {
   width: 100px;
   height: 100px;
   text-align: center;
   align-self: center;
 }
-main #services .services-list .services-item h2 {
+main .services-list .services-item h2 {
   font-size: 4rem;
 }
-main #services .services-list .services-item li {
+main .services-list .services-item li {
   list-style: square;
   line-height: 4rem;
 }
-main #services .services-list .services-item li::marker {
+main .services-list .services-item li::marker {
   color: #e7196a;
 }
-main #services .services-list .services-item button {
+main .services-list .services-item button {
   min-width: 80%;
   padding: 1.2rem;
   text-transform: uppercase;
@@ -403,44 +506,35 @@ main #services .services-list .services-item button {
   font-weight: 500;
   border: none;
 }
-main #services .section-results {
-  padding: 0 12rem;
-  min-height: 36.5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 10rem;
-  z-index: 2;
-  align-items: center;
-  justify-content: center;
-}
-main #services .section-results .result-text {
-  width: 60%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-main #services .section-results .result-text .result-text-box {
-  height: 50%;
-  font-size: 4.5rem;
-  padding-left: 2rem;
-}
-main #services .section-results .result-text .result-text-box h2 {
-  font-size: 7rem;
-  font-weight: 700;
-  color: #e7196a;
-}
-main #services .section-results .result-img {
-  width: 40%;
-  min-height: inherit;
-  background-image: url(../img/Group_2-removebg-preview.png);
-  background-size: 80%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #1e2248;
-}
 
 footer {
   height: 20vh;
   border: 1px solid black;
+}
+
+:root {
+  --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
+  --bg-color: $secondary-color;
+  --bg-opacity: 0.1;
+  --darktheme-text-color: #fff;
+  --darktheme-bg-color: #1e2248;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Kanit", sans-serif;
+  color: var(--darktheme-text-color);
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #1e2248;
 }/*# sourceMappingURL=style.css.map */

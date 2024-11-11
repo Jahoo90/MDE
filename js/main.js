@@ -13,11 +13,14 @@ const carouselSlides = document.querySelector('.custom-carousel-slides');
 let currentIndex = 1; // Startujemy od indeksu 1, aby pokazać pierwszy prawdziwy slajd
 let autoSlideInterval;
 
-// Ustawienie szerokości slajdu (na wypadek zmiany rozmiaru ekranu)
-const slideWidth = slides[0].clientWidth;
+// Funkcja do ustawienia szerokości slajdu
+function getSlideWidth() {
+  return slides[0].clientWidth;
+}
 
 // Funkcja do wyświetlania slajdu na podstawie indeksu
 function showSlide(index) {
+  const slideWidth = getSlideWidth(); // Za każdym razem pobieramy szerokość
   carouselSlides.style.transition = 'transform 0.5s ease-in-out';
   carouselSlides.style.transform = `translateX(-${index * slideWidth}px)`;
 
@@ -29,14 +32,14 @@ function showSlide(index) {
 
 // Przeskakiwanie na początek lub koniec karuzeli
 carouselSlides.addEventListener('transitionend', () => {
-  if (currentIndex === slides.length - 1) {
+  if (currentIndex >= slides.length - 1) {
     carouselSlides.style.transition = 'none';
-    currentIndex = 1;
-    carouselSlides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-  } else if (currentIndex === 0) {
+    currentIndex = 1; // Wracamy do pierwszego rzeczywistego slajdu
+    carouselSlides.style.transform = `translateX(-${currentIndex * getSlideWidth()}px)`;
+  } else if (currentIndex <= 0) {
     carouselSlides.style.transition = 'none';
-    currentIndex = slides.length - 2;
-    carouselSlides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    currentIndex = slides.length - 2; // Wracamy do ostatniego rzeczywistego slajdu
+    carouselSlides.style.transform = `translateX(-${currentIndex * getSlideWidth()}px)`;
   }
 });
 
@@ -83,6 +86,12 @@ autoSlideInterval = setInterval(nextSlide, 5000);
 
 // Początkowe wyświetlenie
 showSlide(currentIndex);
+
+// Zapewnienie, że szerokość jest aktualizowana przy zmianie rozmiaru okna
+window.addEventListener('resize', () => {
+  showSlide(currentIndex);
+});
+
 
 // ############################ Zmiana jezyka ##############################
 

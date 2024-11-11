@@ -1,0 +1,99 @@
+
+
+// ################# CAROUSEL #################################
+    .custom-carousel {
+      margin-top: 1rem;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    
+    .custom-carousel-slides {
+      width: 100%;
+      display: flex;
+      transition: transform 0.9s ease-in-out;
+      display: flex;
+    }
+    
+    .custom-carousel-item {
+      min-width: 100%;
+      min-height: 60vh;
+      padding: 0 0 50px 40px;
+      color: #fff;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .carousel-item-text {
+      width: 50%;
+      height: auto;
+      align-self: center;
+      margin-left: 8%;
+      h1 {
+        font-size: 5rem;    
+        color: var(--darktheme-text-color);
+        font-weight: 700;
+        span {
+          color: $primary-color;
+        }
+      }
+    }
+    
+    .carousel-item-img {
+      width: 60%;
+      height: 60vh;
+      height: auto;
+      display: flex;
+      align-items: flex-end;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        
+      }
+    }
+    
+    .custom-carousel-prev, .custom-carousel-next {
+      position: absolute;
+      top: 30%;
+      height: 50%;
+      width: 40%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      color: #ffffff00;
+      font-size: 2rem;
+      padding: 5rem;
+      cursor: pointer;
+    }
+    
+    .custom-carousel-prev {
+      left: 1px;
+    }
+    
+    .custom-carousel-next {
+      right: 1px;
+    }
+    
+    .custom-carousel-indicators {
+      position: absolute;
+      bottom: 15px;
+      right: 10%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    
+    .custom-indicator {
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      // border: 5px solid $secondary-color;
+      cursor: pointer;
+    }
+    
+    .custom-indicator.active {
+      background-color: $primary-color;
+      border: none;
+    }
