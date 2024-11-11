@@ -339,7 +339,7 @@ main #section-about_us .about_us-text {
   width: 65%;
   align-self: center;
   padding: 5%;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 500;
 }
 main #section-about_us .about_us-text h4 {
@@ -528,13 +528,11 @@ footer {
 
 html {
   font-size: 62.5%;
-  font-family: "Kanit", sans-serif;
-  color: var(--darktheme-text-color);
 }
 
 body {
+  font-family: "Kanit", serif;
   font-size: 1.6rem;
   font-weight: 400;
-  font-style: normal;
   background-color: #1e2248;
 }/*# sourceMappingURL=style.css.map */
