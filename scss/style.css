@@ -22,6 +22,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   background-color: #1e2248;
+  color: #fff;
 }
 
 .kanit-regular {
@@ -308,6 +309,68 @@ main #section-about_us h2 {
   font-size: 4.2rem;
   z-index: 2;
 }
+main .crew-team {
+  position: relative;
+  width: 100%;
+  border: 1px solid red;
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5rem;
+  background-image: url(../../img/office-work_bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+main .crew-team::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e2248;
+  z-index: 1;
+  opacity: 0.7;
+}
+main .crew-team .crew-team-title {
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+main .crew-team .crew-team-title h4 {
+  font-size: 3.4rem;
+}
+main .crew-team .crew-team-title h2 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+main .crew-team .person-card {
+  width: 70%;
+  border: 8px solid #e7196a;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+main .crew-team .person-card img {
+  width: 30rem;
+  height: 30rem;
+}
+main .crew-team .person-card .person-description {
+  width: 70%;
+  padding: 5%;
+}
+main .crew-team .person-card .person-description h2 {
+  font-size: 3.4rem;
+}
 main #services, main #services-extra {
   position: relative;
   min-height: 100vh;
@@ -400,7 +463,7 @@ main .services-list {
   color: #1e2248;
 }
 main .services-list .services-item {
-  min-width: 29%;
+  width: 29%;
   border: 8px solid #e7196a;
   z-index: 2;
   padding: 5rem;
@@ -438,6 +501,68 @@ main .services-list .services-item button {
   color: var(--bg-color);
   font-weight: 500;
   border: none;
+}
+main #contactus {
+  width: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main #contactus .contactus-container {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main #contactus .contactus-container .contactus-title h3 {
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+main #contactus .contactus-container .contactus-title h2 {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+main #contactus .contactus-container .contactus-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main #contactus .contactus-container .contactus-box .contactus-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+main #contactus .contactus-container .contactus-box .contactus-item a .contactus-icon, main #contactus .contactus-container .contactus-box .contactus-item .contactus-icon {
+  width: 7.2rem;
+  height: 7.2rem;
+  padding: 5%;
+}
+main #contactus .contactus-container .contactus-box .contactus-item .contactus-info {
+  margin: 0;
+  padding: 1%;
+  font-size: 1.6rem;
+}
+main #contactus .contactus-container .contactus-box .contactus-item .contactus-info h5 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0;
+}
+main #contactus .contactus-container .contactus-box .contactus-item .contactus-info p {
+  font-weight: 500;
+  margin: 0;
+  line-height: 2.4rem;
+}
+main #contactus .map {
+  border: 8px solid #e7196a;
+}
+main #contactus .contactus-img {
+  width: 40%;
+}
+main #contactus .contactus-img img {
+  width: 100%;
 }
 
 footer {
