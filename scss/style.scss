@@ -1,20 +1,8 @@
 
 @import 'variables';
-@import 'mixins';
-@import 'fonts';
-@import 'global';
-
-@import 'components/carousel';
-
-@import 'layouts/header';
-@import 'layouts/main';
-@import 'layouts/footer';
-
-
-
 
 :root {
-  --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
+  --bs-secondary-color: #c5608800;
   --bg-color: $secondary-color;
   --bg-opacity: 0.1;
   --darktheme-text-color: #fff;
@@ -40,6 +28,15 @@ body {
 }
 
 
+@import 'mixins';
+@import 'fonts';
+@import 'global';
 
+
+@import 'layouts/header';
+@import 'layouts/main';
+@import 'layouts/footer';
+
+@import 'components/carousel';
 
 

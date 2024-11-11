@@ -1,29 +1,4 @@
 @charset "UTF-8";
-:root {
-  --bs-secondary-color: #c5608800;
-  --bg-color: $secondary-color;
-  --bg-opacity: 0.1;
-  --darktheme-text-color: #fff;
-  --darktheme-bg-color: #1e2248;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Kanit", serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  background-color: #1e2248;
-}
-
 .kanit-regular {
   font-family: "Kanit", serif;
   font-weight: 400;
@@ -84,10 +59,6 @@ img {
   height: auto;
 }
 
-a {
-  text-decoration: none;
-}
-
 .btn-primary {
   background-color: #e7196a;
   border: white;
@@ -104,6 +75,101 @@ a {
   background-color: #ff0c6d;
   color: white;
   z-index: 100;
+}
+
+.custom-carousel {
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.custom-carousel-slides {
+  width: 100%;
+  display: flex;
+  transition: transform 0.9s ease-in-out;
+  display: flex;
+}
+
+.custom-carousel-item {
+  min-width: 100%;
+  min-height: 60vh;
+  padding: 0 0 50px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-item-text {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  margin-left: 8%;
+}
+.carousel-item-text h1 {
+  font-size: 5rem;
+  color: var(--darktheme-text-color);
+  font-weight: 700;
+}
+.carousel-item-text h1 span {
+  color: #e7196a;
+}
+
+.carousel-item-img {
+  width: 60%;
+  height: 60vh;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+}
+.carousel-item-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.custom-carousel-prev, .custom-carousel-next {
+  position: absolute;
+  top: 30%;
+  height: 50%;
+  width: 40%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgba(255, 255, 255, 0);
+  font-size: 2rem;
+  padding: 5rem;
+  cursor: pointer;
+}
+
+.custom-carousel-prev {
+  left: 1px;
+}
+
+.custom-carousel-next {
+  right: 1px;
+}
+
+.custom-carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  right: 10%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.custom-indicator {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.custom-indicator.active {
+  background-color: #e7196a;
+  border: none;
 }
 
 header {
@@ -445,97 +511,27 @@ footer {
   border: 1px solid black;
 }
 
-.custom-carousel {
-  margin-top: 1rem;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+:root {
+  --bs-secondary-color: #c5608800; /* Tutaj wpisz wybrany kolor */
+  --bg-color: $secondary-color;
+  --bg-opacity: 0.1;
+  --darktheme-text-color: #fff;
+  --darktheme-bg-color: #1e2248;
 }
 
-.custom-carousel-slides {
-  width: 100%;
-  display: flex;
-  transition: transform 0.9s ease-in-out;
-  display: flex;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.custom-carousel-item {
-  min-width: 100%;
-  min-height: 60vh;
-  padding: 0 0 50px 40px;
-  color: #fff;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
+html {
+  font-size: 62.5%;
 }
 
-.carousel-item-text {
-  width: 50%;
-  height: auto;
-  align-self: center;
-  margin-left: 8%;
-}
-.carousel-item-text h1 {
-  font-size: 5rem;
-  color: var(--darktheme-text-color);
-  font-weight: 700;
-}
-.carousel-item-text h1 span {
-  color: #e7196a;
-}
-
-.carousel-item-img {
-  width: 60%;
-  height: 60vh;
-  height: auto;
-  display: flex;
-  align-items: flex-end;
-}
-.carousel-item-img img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.custom-carousel-prev, .custom-carousel-next {
-  position: absolute;
-  top: 30%;
-  height: 50%;
-  width: 40%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  color: rgba(255, 255, 255, 0);
-  font-size: 2rem;
-  padding: 5rem;
-  cursor: pointer;
-}
-
-.custom-carousel-prev {
-  left: 1px;
-}
-
-.custom-carousel-next {
-  right: 1px;
-}
-
-.custom-carousel-indicators {
-  position: absolute;
-  bottom: 15px;
-  right: 10%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.custom-indicator {
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
-.custom-indicator.active {
-  background-color: #e7196a;
-  border: none;
+body {
+  font-family: "Kanit", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #1e2248;
 }/*# sourceMappingURL=style.css.map */
