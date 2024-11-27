@@ -37,12 +37,12 @@ main {
 
   // ########################  Achivment section #############################
   .achivments {
-    @include border(red);
+    // @include border(red);
     display: flex;
     flex-direction: column;
     padding: 5% 0;
     .achivment-numbers {
-      @include border(green);
+      // @include border(green);
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -60,9 +60,9 @@ main {
       }
     }
 
-    .companies {
-      
-    }
+    // .companies {
+
+    // }
 
   }
 
