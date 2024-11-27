@@ -264,6 +264,29 @@ main #section-products .key-words h2 span {
   font-weight: 900;
   font-size: 4rem;
 }
+main .achivments {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
+}
+main .achivments .achivment-numbers {
+  border: 1px solid green;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 10%;
+}
+main .achivments .achivment-numbers .achivment-card {
+  border-left: 9px solid #e7196a;
+  padding: 0 2rem;
+  font-size: 4.5rem;
+  margin-right: 10rem;
+}
+main .achivments .achivment-numbers .achivment-card h2 {
+  font-size: 7rem;
+  font-weight: 600;
+}
 main #section-about_us {
   display: flex;
   flex-direction: row;
@@ -312,7 +335,6 @@ main #section-about_us h2 {
 main .crew-team {
   position: relative;
   width: 100%;
-  border: 1px solid red;
   padding: 5%;
   display: flex;
   flex-direction: row;
@@ -355,7 +377,6 @@ main .crew-team .person-card {
   border: 8px solid #e7196a;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   z-index: 2;
@@ -508,7 +529,7 @@ main #contactus {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 main #contactus .contactus-container {
   width: 35%;

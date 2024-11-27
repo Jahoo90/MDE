@@ -35,6 +35,40 @@ main {
     }
   }
 
+  // ########################  Achivment section #############################
+  .achivments {
+    @include border(red);
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+    .achivment-numbers {
+      @include border(green);
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: 0 10%;
+
+      .achivment-card {
+        border-left: 9px solid $primary-color;
+        padding: 0 2rem;
+        font-size: 4.5rem;
+        margin-right: 10rem;
+        h2 {
+          font-size: 7rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .companies {
+      
+    }
+
+  }
+
+
+
+  // ########################  About Us section #############################
   #section-about_us {
     display: flex;
     flex-direction: row;
@@ -87,7 +121,7 @@ main {
   .crew-team {
     position: relative;
     width: 100%;
-    border: 1px solid red;
+    // border: 1px solid red;
     padding: 5%;
     display: flex;
     flex-direction: row;
@@ -131,7 +165,6 @@ main {
       border: 8px solid $primary-color;
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       z-index: 2;
@@ -149,6 +182,7 @@ main {
     }
   }
 
+  // ########################  Services section #############################
   
     #services, #services-extra {
       position: relative;
@@ -297,7 +331,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .contactus-container {
       width: 35%;
