@@ -234,6 +234,13 @@ header nav button span {
 
 main {
   min-height: 60vh;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-self: center;
+  border: 1px solid red;
+  justify-self: center;
 }
 main #section-products {
   text-align: center;
@@ -416,24 +423,23 @@ main #services::before, main #services-extra::before {
 }
 main #services .services-container, main #services-extra .services-container {
   width: 100%;
-  height: 50vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid red;
 }
 main #services .services-container .services-cards, main #services-extra .services-container .services-cards {
   width: 55%;
-  height: inherit;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  gap: 15px;
 }
 main #services .services-container .services-cards .services-card, main #services-extra .services-container .services-cards .services-card {
   width: 30%;
-  height: 18rem;
+  height: 16rem;
   padding: 5%;
   text-align: center;
   display: flex;
@@ -444,7 +450,6 @@ main #services .services-container .services-cards .services-card, main #service
 }
 main #services .services-container .service-box, main #services-extra .services-container .service-box {
   width: 40%;
-  height: 100%;
   padding: 5% 1%;
   display: flex;
   flex-direction: column;
@@ -585,8 +590,55 @@ main #contactus .contactus-img img {
 }
 
 footer {
-  height: 20vh;
+  padding: 3% 5%;
   border: 1px solid black;
+}
+footer img {
+  max-height: 90px;
+}
+footer .upper-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid green;
+  padding: 2px;
+}
+footer .start-column {
+  display: flex;
+  align-items: center;
+}
+footer .start-column .footer-box * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: underline;
+  color: #fff;
+  margin-right: 10px;
+}
+footer .start-column .footer-box * .footer-icon {
+  width: 30px;
+  margin: 10px;
+}
+footer .end-column {
+  display: flex;
+  flex-direction: row;
+}
+footer .end-column a {
+  margin-left: 10px;
+}
+footer .end-column a .footer-icon {
+  height: 100%;
+}
+footer .bottom-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .bottom-row h2 {
+  font-size: 30px;
+  margin-right: 20px;
 }
 
 .custom-carousel {

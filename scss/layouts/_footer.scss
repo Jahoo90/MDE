@@ -1,7 +1,60 @@
 
 
 footer {
-    height: 20vh;
-    @include border(black)
+    padding: 3% 5%;
+    @include border(black);
+    img {
+      max-height: 90px;
+    }
+    
+    .upper-row {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      @include border(green);
+      padding: 2px;
+
+    }
+    .start-column {
+      display: flex;
+      align-items: center;
+
+      .footer-box * {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: underline;
+        color:#fff;
+        margin-right: 10px;
+
+        .footer-icon {
+          width: 30px;
+          margin: 10px;
+        }
+      }
+    }
+    .end-column {
+      display: flex;
+      flex-direction: row;
+      a {
+          margin-left
+          : 10px;
+          .footer-icon {
+          height: 100%;
+        }
+      }
+    }
+    .bottom-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      h2 {
+        font-size: 30px;
+        margin-right: 20px;
+      }
+    }
+
   }
   
