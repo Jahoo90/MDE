@@ -105,6 +105,7 @@ function changeLanguage(lang) {
 const switchButton = document.querySelector("header button");
 let theme = localStorage.getItem("theme");
 
+/*
 switchButton.addEventListener("click", () => {
   console.log("siema");
     if (theme === "dark") {
@@ -127,3 +128,4 @@ if (theme === "dark") {
 if (theme === "light") {
     document.querySelector("body").classList.add("light");
 }
+*/
